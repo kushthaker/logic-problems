@@ -1,7 +1,8 @@
 
-// Chess board problem
+// Chess board problem - taken from ELOQUENT JAVASCRIPT CHAPTER 2
 
-// Write a program that creates a string that represents an 8×8 grid, using newline characters to separate lines. At each position of the grid there is either a space or a “#” character. The characters should form a chess board.
+// Write a program that creates a string that represents an 8×8 grid, using newline characters to separate lines. 
+// At each position of the grid there is either a space or a “#” character. The characters should form a chess board.
 
 // Passing this string to console.log should show something like this:
 
@@ -14,7 +15,8 @@
 //  # # # #
 // # # # #
 
-// When you have a program that generates this pattern, define a variable size = 8 and change the program so that it works for any size, outputting a grid of the given width and height.
+// When you have a program that generates this pattern, define a variable size = 8,
+// and change the program so that it works for any size, outputting a grid of the given width and height.
 
 var size = 8;
 
@@ -39,7 +41,8 @@ console.log(str);
 
 
 // EXERCISE 
-// Create a function that takes in an integer and prints all numbers from 1 to the given integer the number of times equal to the current loop index (ie. 1, 2, 2, 3, 3, 3, ...).
+// Create a function that takes in an integer and prints all numbers from 1 to the given integer 
+// the number of times equal to the current loop index (ie. 1, 2, 2, 3, 3, 3, ...).
 // Alter your answer to exercise 2 to log the numbers in the form of a pyramid.
 
 var str = "";
@@ -61,7 +64,7 @@ for (var i = 0; i < max; i++) {
 console.log(str);
 
 
-// Experimenting with .map() and Math.randon() functions.
+// Experimenting with .map() and Math.random() functions.
 // Generating array of random numbers between 1 - 40, 
 // testing if elements can be divided by 5, 
 // adding successful elements
@@ -73,15 +76,15 @@ function is_divisable(arr_value) {
 		return 0;
 }
 
-var my_array = [];
-var sum = 0;
+	solved_arr = [];
+	var my_array = [];
+	var sum = 0;
 
 
 for (var i = 0; i < 20; i++) {
 	my_array[i] = Math.floor(Math.random() * 40) + 1;
 }
 
-	solved_arr = [];
 	solved_arr = my_array.map(is_divisable);
 
 for (var i = 0; i < 20; i++) {
@@ -91,6 +94,21 @@ for (var i = 0; i < 20; i++) {
 console.log(sum);
 
 
+// Given a string with uppercase and lowercase characters.
+// Have to return the indexes of the uppercase characters, 
+// using .length(), .push() and toUpperCase() functions, 
+// this problem is taken from codewars.com
+
+
+var str = "TrYinG";
+matchArray = [];
+
+for (var i = 0; i < str.length; i++) {
+	if (str[i] === str[i].toUpperCase())
+		matchArray.push(i);
+}
+
+console.log(matchArray);
 
 
 
